@@ -4,7 +4,7 @@
 #
 Name     : perl-Carp-Assert
 Version  : 0.21
-Release  : 3
+Release  : 4
 URL      : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Carp-Assert-0.21.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Carp-Assert-0.21.tar.gz
 Summary  : unknown
@@ -65,7 +65,7 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/Carp/Assert.pm
+/usr/lib/perl5/vendor_perl/5.28.0/Carp/Assert.pm
 
 %files dev
 %defattr(-,root,root,-)
