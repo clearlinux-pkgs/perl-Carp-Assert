@@ -4,10 +4,10 @@
 #
 Name     : perl-Carp-Assert
 Version  : 0.21
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Carp-Assert-0.21.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Carp-Assert-0.21.tar.gz
-Summary  : unknown
+Summary  : executable comments
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
 BuildRequires : buildreq-cpan
@@ -23,6 +23,7 @@ use Carp::Assert;
 Summary: dev components for the perl-Carp-Assert package.
 Group: Development
 Provides: perl-Carp-Assert-devel = %{version}-%{release}
+Requires: perl-Carp-Assert = %{version}-%{release}
 
 %description dev
 dev components for the perl-Carp-Assert package.
