@@ -4,12 +4,13 @@
 #
 Name     : perl-Carp-Assert
 Version  : 0.21
-Release  : 12
+Release  : 13
 URL      : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Carp-Assert-0.21.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/N/NE/NEILB/Carp-Assert-0.21.tar.gz
-Summary  : executable comments
+Summary  : unknown
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
+Requires: perl-Carp-Assert-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -29,14 +30,24 @@ Requires: perl-Carp-Assert = %{version}-%{release}
 dev components for the perl-Carp-Assert package.
 
 
+%package perl
+Summary: perl components for the perl-Carp-Assert package.
+Group: Default
+Requires: perl-Carp-Assert = %{version}-%{release}
+
+%description perl
+perl components for the perl-Carp-Assert package.
+
+
 %prep
 %setup -q -n Carp-Assert-0.21
+cd %{_builddir}/Carp-Assert-0.21
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -46,7 +57,7 @@ else
 fi
 
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
@@ -66,8 +77,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Carp/Assert.pm
 
 %files dev
 %defattr(-,root,root,-)
 /usr/share/man/man3/Carp::Assert.3
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Carp/Assert.pm
