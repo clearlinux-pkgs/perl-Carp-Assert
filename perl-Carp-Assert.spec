@@ -4,7 +4,7 @@
 #
 Name     : perl-Carp-Assert
 Version  : 0.22
-Release  : 27
+Release  : 28
 URL      : https://cpan.metacpan.org/authors/id/Y/YV/YVES/Carp-Assert-0.22.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/Y/YV/YVES/Carp-Assert-0.22.tar.gz
 Summary  : unknown
